@@ -12,7 +12,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 class HttpDownload {
-    public void process(String uri, String localFileName) throws IOException {
+    public static void process(String uri, String localFileName) throws IOException {
         File myFile = new File(localFileName);
         CloseableHttpClient client = HttpClients.createDefault();
         try (CloseableHttpResponse response = client.execute(new HttpGet(uri))) {
